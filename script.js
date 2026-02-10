@@ -40,6 +40,14 @@ document.addEventListener("touchmove", (e) => {
 
   card.style.transform = `
     rotateY(${-x}deg)
+
+  const glow = document.querySelector(".mouse-glow");
+
+document.addEventListener("mousemove", (e) => {
+  glow.style.left = e.clientX + "px";
+  glow.style.top = e.clientY + "px";
+});
+
     rotateX(${y}deg)
     scale(1.02)
   `;
